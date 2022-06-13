@@ -1,0 +1,14 @@
+<div class="container">
+    <section class="source-section">
+        <input type="text" class="source-input" [(ngModel)]="sourceInput" (input)="inputCalculate('source')">
+        <select class="source-currency" (change)="calculate('source')" [(ngModel)]="sourceCurrency">
+            <option *ngFor="let currency of currenciesObject" value="{{currency.code}}">{{currency.name}}</option>
+        </select>
+    </section>
+    <section class="destination-section">
+        <input type="text" class="destination-input" [(ngModel)]="destinationInput" (input)="inputCalculate('destination')">
+        <select class="destination-currency" (change)="calculate('destination')" [(ngModel)]="destinationCurrency">
+            <option *ngFor="let currency of currenciesObject" value="{{currency.code}}">{{currency.name}}</option>
+        </select>
+    </section>
+</div>
